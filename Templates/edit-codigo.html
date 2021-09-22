@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="col-md-7 offset-md-2">
+    <div class="card card-body">
+        <form action="/update/{{codig.0}}" method="POST">
+            <div class="form-group">                
+                <input type="text" name="numberonu" placeholder="Numero ONU" value="{{ codig.1 }}" class="form-control">
+            </div>
+            <div class="form-group">                
+                <input type="text" name="numberemergency" placeholder="Numero de Emergencia" value="{{ codig.2 }}" class="form-control">
+            </div>
+            <div class="form-group">                
+                <input type="text" name="guideemergency" placeholder="Guia de Emergencia" value="{{ codig.3 }}" class="form-control">
+            </div>           
+            <div class="d-grid gap-2 pt-4">
+                <button type="submit" class="btn btn-success ">
+                    Save
+                </button>   
+            </div>             
+        </form>
+    </div>
+</div>
+
+{% endblock %}
